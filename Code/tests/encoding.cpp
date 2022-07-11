@@ -67,8 +67,7 @@ TEST_CASE("Encoding factory", "[encoding.factory]")
 
 TEST_CASE("Static structures", "[encoding.static]")
 {
-    GIVEN("GameId")
-    {
+    GIVEN("GameId"){
         GameId sendObjects, recvObjects;
         sendObjects.ModId = 1456987;
         sendObjects.BaseId = 0x789654;
@@ -86,8 +85,7 @@ TEST_CASE("Static structures", "[encoding.static]")
         }
     }
 
-    GIVEN("Vector3_NetQuantize")
-    {
+    GIVEN("Vector3_NetQuantize"){
         Vector3_NetQuantize sendObjects, recvObjects;
         sendObjects.x = 142.56f;
         sendObjects.y = 45687.7f;
@@ -106,8 +104,7 @@ TEST_CASE("Static structures", "[encoding.static]")
         }
     }
 
-    GIVEN("Vector2_NetQuantize")
-    {
+    GIVEN("Vector2_NetQuantize"){
         Vector2_NetQuantize sendObjects, recvObjects;
         sendObjects.x = 1000.89f;
         sendObjects.y = -485632.75f;
@@ -125,8 +122,7 @@ TEST_CASE("Static structures", "[encoding.static]")
         }
     }
 
-    GIVEN("Rotator2_NetQuantize")
-    {
+    GIVEN("Rotator2_NetQuantize"){
         Rotator2_NetQuantize sendObjects, recvObjects;
         sendObjects.x = 1.89f;
         sendObjects.y = TiltedPhoques::Pi * 2.0f;
@@ -144,8 +140,7 @@ TEST_CASE("Static structures", "[encoding.static]")
         }
     }
 
-    GIVEN("Rotator2_NetQuantize needing wrap")
-    {
+    GIVEN("Rotator2_NetQuantize needing wrap"){
         // This test is a bit dangerous as floating errors can lead to sendObjects != recvObjects but the difference is minuscule so we don't care abut such cases
         Rotator2_NetQuantize sendObjects, recvObjects;
         sendObjects.x = -1.87f;
@@ -165,8 +160,7 @@ TEST_CASE("Static structures", "[encoding.static]")
     }
 }
 
-TEST_CASE("Differential structures", "[encoding.differential]")
-{
+TEST_CASE("Differential structures", "[encoding.differential]"){
     GIVEN("Full ActionEvent")
     {
         ActionEvent sendAction, recvAction;
